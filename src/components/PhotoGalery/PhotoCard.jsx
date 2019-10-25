@@ -1,6 +1,6 @@
 import React from "react";
 
-const PhotoCard = ({webformatURL,tags, likes, comments ,views, downloads}) => {
+const PhotoCard = ({webformatURL,tags, likes, comments ,views, downloads, ckickToOpenModal}) => {
   return (
     <li className="photo-card">
       <img src={webformatURL} alt={tags} />
@@ -22,7 +22,7 @@ const PhotoCard = ({webformatURL,tags, likes, comments ,views, downloads}) => {
           {downloads}
         </p>
       </div>
-      <button type="button" className="fullscreen-button">
+      <button type="button" className="fullscreen-button" onClick={ckickToOpenModal}>
         <i className="material-icons">zoom_out_map</i>
       </button>
     </li>
